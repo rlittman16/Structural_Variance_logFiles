@@ -1,0 +1,22 @@
+THIS IS THE LOGFILE FOR INSTALLING AND USING CNV-SEQ
+Manual found at:http://tiger.dbs.nus.edu.sg/cnv-seq/doc/manual.pdf
+
+Input:
+	BAM file needs to be converted to .hits file using samtools
+Dependencies:
+Perl: 5.9.9, 5.10.0
+R: 2.10.1
+ggplot2: 0.8.5
+	commands used to install ggplot2
+	R;
+	install.packages("ggplot2")
+Commands used to install:
+R CMD INSTALL cnv/
+
+Commands used to run:
+samtools view -F 4 /home/russell/SV_data/A_J.chr19.1.25p_sorted.bam | perl -lane 'print "$F[2]\t$F[3]"' > A_J.chr19.1.25p_sorted.hits
+
+./cnv-seq.pl --test A_J.chr19.1.25p_sorted.hits --ref /home/russell/SV_data/chr19_new.fa --genome chrom19
+
+Reason Can't Install on Hoffman:
+Can not install ggplot2 on hoffman

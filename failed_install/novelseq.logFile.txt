@@ -1,0 +1,14 @@
+THIS IS THE LOGFILE FOR INSTALLING AND USING NovelSeq
+INPUT:
+fasta or fastq (paired-end)
+For step 3:
+	dir, dataset, satRemsChrs, chroSDir, AllreadsSeq, histogram, maxNumOfReadsEachCluster
+DEPENDENCIES:
+
+COMMANDS USED TO INSTALL:
+Comes installed after tar -xvzf
+COMMANDS USED TO RUN:
+
+ERROR (POTENTIAL REASON FOR NOT CONTINUING):
+
+REASON FOR NOT INSTALLING ON HOFFMAN:

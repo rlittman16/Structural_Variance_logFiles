@@ -1,0 +1,31 @@
+THIS IS THE LOGFILE FOR INSTALLING AND USING Platypus
+INPUT:
+.bam
+.fa
+.fa.fai (created using samtools faidx)
+.bam.bai (created using samtools index)
+
+DEPENDENCIES:
+Python >=2.6
+C compiler
+htslib
+
+COMMANDS USED TO INSTALL:
+./buildPlatypus.sh
+python Platypus.py callVariants --bamFiles=DATA.bam --refFile=GENOME.fa --output=test.vcf
+
+COMMANDS USED TO RUN:
+
+ERROR (POTENTIAL REASON FOR NOT CONTINUING):
+ERROR 1: htslibWrapper.c:243:25: fatal error: htslib/bgzf.h: No such file or directory
+	SOLUTION 1: redownload and install htslib then rebuild
+REASON FOR NOT INSTALLING ON HOFFMAN:
+
+ERROR 2: ImportError: libhts.so.1: cannot open shared object file: No such file or directory
+	SOLUTION 2:Put path to libhts in $LD_LIBRARY_PATH variablein .bashrc
+
+ERROR 3: IOError: [Errno 2] No such file or directory: '/home/russell/SV_data/chr19_new.fa.fai' (runtime error)
+	SOLUTION 3:Need to use samtools faidx to create fa.fai
+
+ERROR 4: IOError: Error while opening index for file `/home/russell/SV_data/A_J.chr19.1.25p_sorted.bam`. Check that index exists
+	SOLUTION 4: create index file using samtools index .bam

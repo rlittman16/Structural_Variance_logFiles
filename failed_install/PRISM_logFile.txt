@@ -1,0 +1,24 @@
+THIS IS THE LOGFILE FOR INSTALLING AND USING PRISM
+NOTES:
+
+INPUT:
+SAM
+DEPENDENCIES:
+
+COMMANDS USED TO INSTALL:
+wget http://compbio.cs.toronto.edu/prism/releases/PRISM_1_1_6.linux.x86_64.tar.gz
+tar -xvzf {file}
+cd PRISM
+file bin/smapper
+export PRISM_PATH=$PWD
+
+COMMANDS USED TO RUN:
+preprocessing:
+samtools view -h -o out.sam in.bam
+toolkit/bwasam2prism.py {file}.sam <output folder> <mean of insert size> <std of insert size>
+
+clustering discordant pairs:
+toolkit/cnv_cluster.sh
+
+ERROR (POTENTIAL REASON FOR NOT CONTINUING):
+ERROR1: Documentation is faulty: in cnver_cluster.sh doesn't explain proper inputs

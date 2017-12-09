@@ -1,0 +1,16 @@
+THIS IS THE LOGFILE FOR INSTALLING AND USING inGAP
+NOTES:
+No command line use. Only with gui
+
+INPUT:
+fasta reference
+SAM alignment
+
+DEPENDENCIES:
+java
+
+COMMANDS USED TO RUN:
+start tool: java -mx2000m -jar inGAP.jar
+Follow pdf to run tool
+
+ERROR (POTENTIAL REASON FOR NOT INSTALLING):
