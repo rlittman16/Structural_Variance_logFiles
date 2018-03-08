@@ -1,0 +1,22 @@
+THIS IS THE LOGFILE FOR INSTALLING AND USING GASV
+INPUT:
+
+DEPENDENCIES:
+PERL
+JAVA >= 5
+ant
+
+COMMANDS USED TO INSTALL:
+ANT install:
+        "JAVA_HOME environment not set."  
+./install
+COMMANDS USED TO RUN:
+java -Xms512m -Xmx2048m -jar BAMToGASV.jar Example.bam
+java -jar GASV.jar --batch /home/russell/SV_data/Example.bam.gasv.in
+Preprocessing:
+        java -Xms512m -Xmx2048m -jar BAMToGASV.jar Example.bam
+ERROR (potential reason for not continuing)
+could not install ant dependency because it requires extensive OS
+manipulation (can try again if we want to try and get it to work)
+REASON FOR NOT INSTALLING ON HOFFMAN
+
