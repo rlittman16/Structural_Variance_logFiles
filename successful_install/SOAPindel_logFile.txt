@@ -1,0 +1,21 @@
+THIS IS THE LOGFILE FOR INSTALLING AND USING SOAPindel
+NOTES:
+
+INPUT:
+fasta reference
+bam
+
+DEPENDENCIES:
+linux/unix 
+perl >= 5.8
+samtools >= 0.1.18
+
+COMMANDS USED TO INSTALL:
+wget http://soap.genomics.org.cn/down/SOAPindel_20130918_2.1.7.17.zip
+unzip {file}
+calculate insert size, SD and Reads_length:
+https://www.biostars.org/p/14339/
+
+COMMANDS USED TO RUN:
+
+ERROR (POTENTIAL REASON FOR NOT CONTINUING):
